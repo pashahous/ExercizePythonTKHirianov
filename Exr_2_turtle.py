@@ -68,5 +68,23 @@ def Ex_5(num_square = 5, step_sq = 10):
         trt.pendown()
 
 
-Ex_5()
+def Ex_6(num_of_paw = 12,lenght_puw = 70):
+    """
+    :param num_of_paw:
+    :param lenght_puw:
+    :return:
+    """
+    trt.shape('turtle')
+    # calculate angle of rotate paw
+    angle = 360 / num_of_paw
+    for i in range(num_of_paw):
+        trt.forward(lenght_puw)
+        trt.stamp()
+        trt.backward(lenght_puw)
+        trt.right(angle)
+
+
+
+
+Ex_6(22)
 
