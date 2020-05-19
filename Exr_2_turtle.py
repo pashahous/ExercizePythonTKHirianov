@@ -68,10 +68,10 @@ def Ex_5(num_square = 5, step_sq = 10):
         trt.pendown()
 
 
-def Ex_6(num_of_paw = 12,lenght_puw = 70):
+def Ex_6(num_of_paw = 12,length_puw = 70):
     """
     :param num_of_paw:
-    :param lenght_puw:
+    :param length_puw:
     :return:
     draw paw of
     """
@@ -79,27 +79,54 @@ def Ex_6(num_of_paw = 12,lenght_puw = 70):
     # calculate angle of rotate paw
     angle = 360 / num_of_paw
     for i in range(num_of_paw):
-        trt.forward(lenght_puw)
+        trt.forward(length_puw)
         trt.stamp()
-        trt.backward(lenght_puw)
+        trt.backward(length_puw)
         trt.right(angle)
 
 
 def Ex_7():
+    """
+    Draw a circular spiral
+    """
     trt.shape('turtle')
-    # p = k * angle
     l = 1 # bias
     angle = 10
 
     for i in range(400):
         trt.forward(l)
         trt.left(angle)
+
+        #Increases the length
         l = l + 0.05
 
+        # stop the turtle so you can see the result
+    trt.mainloop()
 
 
+def Ex_8():
+    """
+    Draw a square spiral
+    :return:
+    """
+    l = 15 # length of line
+
+    trt.shape('turtle')
+    for i in range(10):
+        trt.forward(l)
+        trt.left(90)
+        trt.forward(l)
+        trt.left(90)
+        l += 15  # increases the length of line
+        trt.forward(l)
+        trt.left(90)
+        trt.forward(l)
+        trt.left(90)
+        l += 15  # increases the length of line
 
 
+    trt.mainloop()
 
-Ex_7()
+
+Ex_8()
 
