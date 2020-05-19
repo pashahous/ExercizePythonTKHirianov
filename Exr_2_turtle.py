@@ -23,7 +23,7 @@ def Ex_3():
     trt.left(90)
     trt.forward(50)
 
-def Ex_4(angle = 10, acc = 10 ):
+def Ex_4(angle = 20, length = 10 ):
     """
     :param angle:
     angle of rotate a turtle
@@ -35,9 +35,9 @@ def Ex_4(angle = 10, acc = 10 ):
     # Draw circle
     trt.shape('turtle')
 
-    steps = int(360/acc)
+    steps = int(360/length)
     for _ in range(steps):
-        trt.forward(acc)
+        trt.forward(length)
         trt.left(angle)
 
 def Ex_5(num_square = 5, step_sq = 10):
@@ -152,25 +152,31 @@ def Ex_9(num_of_polygon=3):
 import math
 
 def Ex_10():
-    # draw_circle(20)
-    # # trt.left(180)
+
+    # draw_circle(20,1)
     # draw_circle(20,-1)
-    # trt.left(90)
-    # draw_circle(20)
-    # trt.left(180)
-    # draw_circle(20)
-    trt.circle(30,360)
-    trt.circle(-30,360)
-    trt.left(60)
-    trt.circle(30,360)
-    trt.circle(-30,360)
-    trt.left(60)
-    trt.circle(30, 360)
-    trt.circle(-30, 360)
+    # trt.left(60)
+    # draw_circle(20,1)
+    # draw_circle(20,-1)
+    # trt.left(60)
+    # draw_circle(20,1)
+    # draw_circle(20, -1)
+
+    Ex_4(30,50)
+
+
+    # trt.circle(30,360)
+    # trt.circle(-30,360)
+    # trt.left(60)
+    # trt.circle(30,360)
+    # trt.circle(-30,360)
+    # trt.left(60)
+    # trt.circle(30, 360)
+    # trt.circle(-30, 360)
 
 
     trt.mainloop()
-
+## FIX THIS FUNCTION
 def draw_circle(raius = 10, dir = 1):
     trt.shape('turtle')
     accur_of_circle = raius  # кол сторон, при рисовании окружности(точность)
@@ -178,13 +184,32 @@ def draw_circle(raius = 10, dir = 1):
     angle_radians = math.radians(angle)
     legth_of_side = math.sin(angle_radians) * 2 * raius
 
+    if dir == 1:
+        trt.right(angle/2)
+    else:
+        trt.left(angle / 2)
+
     for _ in range(accur_of_circle):
         trt.forward(legth_of_side)
         trt.left(angle*dir)
+    if dir == 1:
+        trt.right(angle / 2)
+    else:
+        trt.left(angle/2)
 
 
+### Exercize 11 Butterfly
+# понимаю, что коряво поэтому  FIX THISSS!!!!!!!!!!!!!!!!!
+def Ex_11_butterfly():
+    radius = 20
+    trt.left(100)
+    for i in range(5):
+        draw_circle(radius,1)
+        draw_circle(radius,-1)
+        radius +=5
 
-Ex_10()
+
+Ex_11_butterfly()
 
 
 
