@@ -23,7 +23,7 @@ def Ex_3():
     trt.left(90)
     trt.forward(50)
 
-def Ex_3(angle = 10, acc = 10 ):
+def Ex_4(angle = 10, acc = 10 ):
     """
     :param angle:
     angle of rotate a turtle
@@ -39,4 +39,34 @@ def Ex_3(angle = 10, acc = 10 ):
     for _ in range(steps):
         trt.forward(acc)
         trt.left(angle)
+
+def Ex_5(num_square = 5, step_sq = 10):
+    """
+    :param num_square:
+    :param step_sq:
+    :return:
+    """
+    square = 10
+    trt.shape('turtle')
+
+    for _ in range(num_square):
+        trt.forward(square)
+        trt.left(90)
+        trt.forward(square)
+        trt.left(90)
+        trt.forward(square)
+        trt.left(90)
+        trt.forward(square)
+
+        trt.penup()
+        trt.forward(step_sq)
+        trt.right(90)
+        trt.forward(step_sq)
+        trt.left(90)
+        trt.left(90)
+        square += step_sq *2
+        trt.pendown()
+
+
+Ex_5()
 
