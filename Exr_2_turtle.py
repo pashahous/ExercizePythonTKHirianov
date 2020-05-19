@@ -128,5 +128,29 @@ def Ex_8():
     trt.mainloop()
 
 
-Ex_8()
+# FIX THIS!!!!
+def n_polygon(num_of_side=5, side_length=30):
+    trt.shape('turtle')
+    # l = 2*PI*R
+    angle = 360 / num_of_side
+
+    for i in range(num_of_side):
+        trt.left(angle)
+        trt.forward(side_length)
+
+# FIX THIS!!!!!
+def Ex_9(num_of_polygon=3):
+    for i in range(num_of_polygon):
+        n_polygon(3+i,20+i*5)
+        trt.penup()
+        trt.left(20+i*5)
+        trt.forward(20)
+        trt.left(20 + i * 5)
+        trt.pendown()
+
+def Ex_10()
+
+Ex_9(7)
+
+
 
