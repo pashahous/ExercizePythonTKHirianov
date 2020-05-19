@@ -73,6 +73,7 @@ def Ex_6(num_of_paw = 12,lenght_puw = 70):
     :param num_of_paw:
     :param lenght_puw:
     :return:
+    draw paw of
     """
     trt.shape('turtle')
     # calculate angle of rotate paw
@@ -84,7 +85,21 @@ def Ex_6(num_of_paw = 12,lenght_puw = 70):
         trt.right(angle)
 
 
+def Ex_7():
+    trt.shape('turtle')
+    # p = k * angle
+    l = 1 # bias
+    angle = 10
+
+    for i in range(400):
+        trt.forward(l)
+        trt.left(angle)
+        l = l + 0.05
 
 
-Ex_6(22)
+
+
+
+
+Ex_7()
 
