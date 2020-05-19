@@ -148,9 +148,43 @@ def Ex_9(num_of_polygon=3):
         trt.left(20 + i * 5)
         trt.pendown()
 
-def Ex_10()
 
-Ex_9(7)
+import math
+
+def Ex_10():
+    # draw_circle(20)
+    # # trt.left(180)
+    # draw_circle(20,-1)
+    # trt.left(90)
+    # draw_circle(20)
+    # trt.left(180)
+    # draw_circle(20)
+    trt.circle(30,360)
+    trt.circle(-30,360)
+    trt.left(60)
+    trt.circle(30,360)
+    trt.circle(-30,360)
+    trt.left(60)
+    trt.circle(30, 360)
+    trt.circle(-30, 360)
+
+
+    trt.mainloop()
+
+def draw_circle(raius = 10, dir = 1):
+    trt.shape('turtle')
+    accur_of_circle = raius  # кол сторон, при рисовании окружности(точность)
+    angle = 360/accur_of_circle # угол попорота стороны
+    angle_radians = math.radians(angle)
+    legth_of_side = math.sin(angle_radians) * 2 * raius
+
+    for _ in range(accur_of_circle):
+        trt.forward(legth_of_side)
+        trt.left(angle*dir)
+
+
+
+Ex_10()
 
 
 
